@@ -1,0 +1,140 @@
+/*  ------------------------------ ALL ------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/*  ------------------------------ MAIN ------------------------------ */
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+main h1 {
+    font-size: 3em;
+}
+
+main hr {
+    width: 20%;
+    margin: 12px auto;
+}
+
+section {
+    float: left;
+    margin: 1em;
+    padding: 10px;
+    height: 95vh;
+}
+
+/*  ------------------------------ SECTION PRINCIPAL (o jogo) ------------------------------ */
+section#principal {
+    width: 70%;
+    border-left: 10px solid #cccccc;
+    border-bottom: 10px solid #cccccc;
+}
+
+/*------------------- dica ---------------------*/
+section#principal div.linha.dica {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 5em;
+}
+
+section#principal div.linha.dica p {
+    text-align: left;
+    display: inline;
+}
+
+/*-------------------- palavra --------------------*/
+section#principal div.linha.palavra {
+    padding-top: 8vh;
+}
+
+section#principal div.linha.palavra form button {
+    width: 5%;
+    font-size: 5em;
+    margin: 10px;
+    padding: 0;
+    border: 1px solid #3c40c6;
+    border-radius: 5px;
+    text-transform: uppercase; 
+}
+
+/*------------------- jogo ---------------------*/
+section#principal div.linha.jogo {
+    padding-top: 12vh;
+}
+
+
+section#principal div.linha.jogo input {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+section#principal div.linha.jogo input#letra {
+    width: 5%;
+}
+
+section#principal div.linha.jogo input#inp-palavra {
+    width: 25%;
+}
+
+section#principal div.linha.jogo button {
+    width: 15%;
+    height: 3em;
+    margin: 10px;
+    background-color: transparent;
+    color: #3c40c6;
+    border: 1px solid #3c40c6;
+    border-radius: 5px; 
+    font-weight: bold;
+}
+
+section#principal div.linha.jogo button:hover {
+    transition: all;
+    transition-delay: 100ms;
+    transition-duration: 850ms;
+    transform: scale(1.1, 1.1);
+    background-color: #3c40c6;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #3c40c6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*  ------------------------------ SECTION BONECO (a dinâmica) ------------------------------ */
+section#boneco {
+    width: 25%;
+    border-bottom: 10px solid #ffffff;
+}
+
+section#boneco img {
+    width: 100%;
+    height: 100vh;
+}
+
+/*  ------------------------------ LINHAS ------------------------------ */
+
+.linha {
+    width: 100%;
+    height: 25vh;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px dotted #3c40c6;
+    border-radius: 5px; 
+}

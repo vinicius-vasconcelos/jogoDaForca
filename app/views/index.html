@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da Forca</title>
+
+    <link rel="stylesheet" href="../public/css/css.css">
+    <script src="../public/js/jogo.js"></script>
+
+    <script src="https://kit.fontawesome.com/da5ccdfc40.js"></script>
+</head>
+<body onload="telaPrincipal()">
+    <main>
+        <section id="principal">
+            <h1>Seje Bem Vindo a Forca</h1>
+            <hr>
+            <div class="linha dica">Dica:<p id="p-txt"></p></div>
+
+            <div id="div-palavra" class="linha palavra">
+            </div>
+
+            <div class="linha jogo">
+                <button id="jogar" onclick="jogar()">Jogar</button>
+
+                <input id="letra" type="text">
+                <button id="chute" onclick="chuteLetra()">Chutar Letra</button>
+
+                <input id="inp-palavra" type="text">
+                <button id="btn-palavra">Chutar Palavra</button>
+
+                <button id="desistir" onclick="desistir()">Desistir</button>
+
+            </div>
+        </section>
+
+        <section id="boneco">
+            <img>
+        </section>
+    </main>
+</body>
+</html>
