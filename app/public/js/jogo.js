@@ -151,5 +151,5 @@ function _geraPalavras(indice) {
             palavra: 'AUSTRIA',
         },
     ]
-    return vetPalavras[0];
+    return vetPalavras[indice];
 }
