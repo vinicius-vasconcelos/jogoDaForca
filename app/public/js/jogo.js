@@ -1,6 +1,7 @@
-img_count;
-pal_count;
-pal_tam;
+img_count = 0;
+pal_count = 0;
+pal_tam = 0;
+obj = null;
 
 //function para restaurar início de jogo
 function telaPrincipal() {
@@ -29,7 +30,7 @@ function jogar() {
     al_tam = 0;
 
     //sorteando a palavra para o jogo
-   let obj = _geraPalavras(Math.floor(Math.random() * 11));
+    obj = _geraPalavras(Math.floor(Math.random() * 11));
 
     //inserindo imagem do boneco
     document.getElementsByTagName('img')[0].style.display = 'block';
@@ -52,7 +53,6 @@ function jogar() {
 
     for (let i = 0; i < obj.palavra.length; i++) 
         str += `<button type="button" value="${obj.palavra[i]}"></button>`;
-
     str += '</form>'
 
     //inserindo as caixinhas na view
@@ -83,6 +83,10 @@ function chuteLetra() {
             pal_tam--;
         }
 
+    let atu = document.getElementById('letrasUtilizadas').innerHTML;
+
+    document.getElementById('letrasUtilizadas').innerHTML = `${atu} ${letra} - `
+
     if(pal_tam == 0) {
         alert('Parabéns você ganhou');
         document.forms['formJogo'].style.display = 'none';
@@ -99,6 +103,18 @@ function chuteLetra() {
             document.forms['formJogo'].style.display = 'none';
             telaPrincipal();
         }
+}
+
+//function para verificar se acertou a palavra
+function chutePalavra() {
+    alert(document.getElementById('inp-palavra').value);
+    alert(obj.palavra)
+    alert(obj.palavra == document.getElementById('inp-palavra').value)
+    if(obj.palavra == document.getElementById('inp-palavra').value) {
+        alert('Parabéns você ganhou');
+        document.forms['formJogo'].style.display = 'none';
+        telaPrincipal();
+    }
 }
 
 function desistir() {

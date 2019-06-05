@@ -77,6 +77,9 @@ section#principal div.linha.jogo {
     padding-top: 12vh;
 }
 
+section#principal div.linha.jogo p {
+    margin-bottom: 1em; 
+}
 
 section#principal div.linha.jogo input {
     font-size: 20px;
