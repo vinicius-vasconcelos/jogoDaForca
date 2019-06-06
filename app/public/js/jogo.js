@@ -8,6 +8,9 @@ function telaPrincipal() {
     //limpando dica
     document.getElementById('p-txt').innerHTML =  `Pressione JOGAR <i class="fas fa-gamepad"></i>`
 
+    //limpando letras utilizadas
+    document.getElementById('letrasUtilizadas').style.display = 'none';
+
     //sumindo com os botões e inputs
     document.getElementById('jogar').style.display = 'inline';
 
@@ -44,6 +47,10 @@ function jogar() {
     document.getElementById('inp-palavra').style.display = 'inline';
     document.getElementById('btn-palavra').style.display = 'inline';
     document.getElementById('desistir').style.display = 'inline';
+
+    //limpando letras utilizadas e exibindo
+    document.getElementById('letrasUtilizadas').innerHTML = '';
+    document.getElementById('letrasUtilizadas').style.display = 'block';
 
     //inserindo dica
     document.getElementById('p-txt').innerHTML = obj.dica;
@@ -107,10 +114,7 @@ function chuteLetra() {
 
 //function para verificar se acertou a palavra
 function chutePalavra() {
-    alert(document.getElementById('inp-palavra').value);
-    alert(obj.palavra)
-    alert(obj.palavra == document.getElementById('inp-palavra').value)
-    if(obj.palavra == document.getElementById('inp-palavra').value) {
+    if(obj.palavra == document.getElementById('inp-palavra').value.trim().toUpperCase()) {
         alert('Parabéns você ganhou');
         document.forms['formJogo'].style.display = 'none';
         telaPrincipal();
